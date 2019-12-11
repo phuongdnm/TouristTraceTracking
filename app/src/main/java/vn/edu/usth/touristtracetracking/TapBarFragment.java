@@ -2,7 +2,9 @@ package vn.edu.usth.touristtracetracking;
 
 
 import android.content.Intent;
+
 import android.graphics.drawable.Drawable;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,9 +24,11 @@ import com.michaldrabik.tapbarmenulib.TapBarMenu;
 public class TapBarFragment extends Fragment {
     TapBarMenu tapBarMenu;
 
+
     public TapBarFragment() {
         // Required empty public constructor
     }
+
 
 
     @Override
@@ -76,32 +80,33 @@ public class TapBarFragment extends Fragment {
         return v;
     }
 
+
     private void onMenuItemClick(View view) {
         tapBarMenu.close();
         switch (view.getId()) {
             case R.id.item1:
                 Log.i("TAG", "Item 1 selected");
-                Intent intentUserProfile = new Intent(getActivity(), UserProfileActivity.class);
-                intentUserProfile.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intentUserProfile);
+                Intent UserProfileIntent = new Intent(getActivity(), UserProfileActivity.class);
+                UserProfileIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(UserProfileIntent);
                 break;
             case R.id.item2:
                 Log.i("TAG", "Item 2 selected");
-                Intent intentMap = new Intent(getActivity(), MapsActivity.class);
-                intentMap.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intentMap);
+                Intent MapIntent = new Intent(getActivity(), MapsActivity.class);
+                MapIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(MapIntent);
                 break;
             case R.id.item3:
                 Log.i("TAG", "Item 3 selected");
-                Intent intentFavorite = new Intent(getActivity(), FavoriteActivity.class);
-                intentFavorite.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intentFavorite);
+                Intent FavoriteIntent = new Intent(getActivity(), FavoriteActivity.class);
+                FavoriteIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(FavoriteIntent);
                 break;
             case R.id.item4:
                 Log.i("TAG", "Item 4 selected");
-                Intent intentSettings = new Intent(getActivity(), SettingsActivity.class);
-                intentSettings.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intentSettings);
+                Intent SettingsIntent = new Intent(getActivity(), SettingsActivity.class);
+                SettingsIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(SettingsIntent);
                 break;
         }
     }

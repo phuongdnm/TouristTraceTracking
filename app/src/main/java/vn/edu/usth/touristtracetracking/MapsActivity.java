@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Criteria;
@@ -31,6 +32,7 @@ import java.util.List;
 
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 
+// 10 DECEMBER 2019
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     public boolean firstTime = true;
@@ -41,7 +43,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Marker marker;
 
     //Tap Bar Menu
-    TapBarMenu tapBarMenu;
+    // TapBarMenu tapBarMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         // Tab Bar Menu created
-        tapBarMenu = findViewById(R.id.tapBarMenu);
+        /* tapBarMenu = findViewById(R.id.tapBarMenu);
         tapBarMenu.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 tapBarMenu.toggle();
@@ -93,7 +95,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 onMenuItemClick(v);
             }
-        });
+        }); */
         // Set onClickListeners
 
         // Checks for permissions, request if not granted
@@ -230,24 +232,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
-    public void onMenuItemClick(View view) {
+    /*public void onMenuItemClick(View view) {
         tapBarMenu.close();
         switch (view.getId()) {
             case R.id.item1:
                 Log.i("TAG", "Item 1 selected");
+                Intent UserProfileIntent = new Intent(MapsActivity.this, UserProfileActivitiy.class);
+                startActivity(UserProfileIntent);
                 break;
             case R.id.item2:
                 Log.i("TAG", "Item 2 selected");
+                Intent MapIntent = new Intent(MapsActivity.this, MapsActivity.class);
+                startActivity(MapIntent);
                 break;
             case R.id.item3:
                 Log.i("TAG", "Item 3 selected");
+                Intent FavoriteIntent = new Intent(MapsActivity.this, FavoriteActivity.class);
+                startActivity(FavoriteIntent);
                 break;
             case R.id.item4:
                 Log.i("TAG", "Item 4 selected");
+                Intent SettingsIntent = new Intent(MapsActivity.this, SettingsActivity.class);
+                startActivity(SettingsIntent);
                 break;
         }
-    }
+    } */
 
 
     @Override

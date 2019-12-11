@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FavoriteActivity">
+    tools:context=".SettingsActivity">
 
     <TextView
-        android:id="@+id/FavoriteActivity"
+        android:id="@+id/settingActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Favorite Places"
+        android:text="Settings Activity"
         android:textSize="50sp"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,13 +19,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
-        android:layout_height="match_parent"
+        android:id="@+id/tapBarFragment"
+        class="vn.edu.usth.touristtracetracking.TapBarFragment"
         android:layout_width="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:name="vn.edu.usth.touristtracetracking.TapBarFragment"
-        android:id="@+id/tapBarFragment">
-    </fragment>
-
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
