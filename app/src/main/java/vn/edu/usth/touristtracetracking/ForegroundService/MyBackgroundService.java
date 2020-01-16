@@ -53,6 +53,7 @@ public class MyBackgroundService extends Service {
 
     public final IBinder mBinder = new LocalBinder();
     private static final long UPDATE_INTERVAL_IN_MIL = 60000;
+    private static int LIST_LENGTH = 10;
     private static final long FASTEST_UPDATE_INTERVAL_IN_MIL = UPDATE_INTERVAL_IN_MIL / 2;
     private static final int NOTIFICATION_ID = 123456789;
     private boolean mChangingConfiguration = false;
@@ -164,7 +165,7 @@ public class MyBackgroundService extends Service {
         // add new location to list
         historyList.add(newLocation);
         // send the list to server
-        if(historyList.size() == 10) {
+        if(historyList.size() == LIST_LENGTH) {
             sendHistory(historyList);
             historyList.clear();
         }

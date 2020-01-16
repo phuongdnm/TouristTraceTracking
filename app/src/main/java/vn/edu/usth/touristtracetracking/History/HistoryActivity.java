@@ -123,7 +123,8 @@ public class HistoryActivity extends FragmentActivity implements OnMapReadyCallb
 
                 MarkerOptions markerOptions = new MarkerOptions()
                         .position(latLng)
-                        .title("(" + latitude + ";" + longitude + ")")
+                        .title(+ latitude + ";" + longitude)
+                        .snippet("Arrival at: " + location.getArrival_at())
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
                 marker = mMap.addMarker(markerOptions);
                 builder.include(markerOptions.getPosition());
