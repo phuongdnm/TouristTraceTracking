@@ -1,6 +1,8 @@
 # Production Release:
 #### Apk file v1.0.1: [1st-link](https://drive.google.com/open?id=13pFtKapLZE6D4WAlVXqlAUbzJWVdNZdA) or [2nd-link](https://drive.google.com/open?id=1qY3VKOJLyEQb0w_H-BdPQFjI-VYxDRkN)
 
+#### Update: Our server is no longer available, but you can contact me to run the app locally.
+
 #### Webversion: (update later)
 
 # Tourist Trace Tracking sub-repos:
